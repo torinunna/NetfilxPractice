@@ -13,6 +13,8 @@
 		86BC2DE1293095A400306A9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86BC2DDF293095A400306A9E /* LaunchScreen.storyboard */; };
 		86BC2DE92930965D00306A9E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BC2DE82930965D00306A9E /* HomeViewController.swift */; };
 		86BC2DEC293097B800306A9E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 86BC2DEB293097B800306A9E /* SnapKit */; };
+		86BC2DF22930A28700306A9E /* Content.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86BC2DF12930A28700306A9E /* Content.plist */; };
+		86BC2DF42930A2A600306A9E /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BC2DF32930A2A600306A9E /* Content.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		86BC2DE0293095A400306A9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		86BC2DE2293095A400306A9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86BC2DE82930965D00306A9E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		86BC2DF12930A28700306A9E /* Content.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Content.plist; sourceTree = "<group>"; };
+		86BC2DF32930A2A600306A9E /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,9 +63,11 @@
 				86BC2DD4293095A300306A9E /* AppDelegate.swift */,
 				86BC2DD6293095A300306A9E /* SceneDelegate.swift */,
 				86BC2DE82930965D00306A9E /* HomeViewController.swift */,
+				86BC2DF32930A2A600306A9E /* Content.swift */,
 				86BC2DDD293095A400306A9E /* Assets.xcassets */,
 				86BC2DDF293095A400306A9E /* LaunchScreen.storyboard */,
 				86BC2DE2293095A400306A9E /* Info.plist */,
+				86BC2DF12930A28700306A9E /* Content.plist */,
 			);
 			path = NetfilxPractice;
 			sourceTree = "<group>";
@@ -132,6 +138,7 @@
 			files = (
 				86BC2DE1293095A400306A9E /* LaunchScreen.storyboard in Resources */,
 				86BC2DDE293095A400306A9E /* Assets.xcassets in Resources */,
+				86BC2DF22930A28700306A9E /* Content.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +152,7 @@
 				86BC2DD5293095A300306A9E /* AppDelegate.swift in Sources */,
 				86BC2DD7293095A300306A9E /* SceneDelegate.swift in Sources */,
 				86BC2DE92930965D00306A9E /* HomeViewController.swift in Sources */,
+				86BC2DF42930A2A600306A9E /* Content.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
