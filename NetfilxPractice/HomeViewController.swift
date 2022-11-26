@@ -5,6 +5,7 @@
 //  Created by YUJIN KWON on 2022/11/25.
 //
 
+import SwiftUI
 import UIKit
 
 class HomeViewController: UICollectionViewController {
@@ -75,5 +76,27 @@ extension HomeViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let sectionName = contents[indexPath.section].sectionName
         print("Test: \(sectionName)섹션의 \(indexPath.row + 1)번째 콘텐츠")
+    }
+}
+
+//MARK:  - preview using SwiftUI
+
+struct HomeViewController_Previews: PreviewProvider {
+    static var previews: some View {
+        Container().edgesIgnoringSafeArea(.all)
+    }
+    
+    struct Container: UIViewControllerRepresentable {
+        func makeUIViewController(context: Context) -> UIViewController {
+            let layout = UICollectionViewLayout()
+            let homeViewController = HomeViewController(collectionViewLayout: layout)
+            return UINavigationController(rootViewController: homeViewController)
+        }
+        
+        func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
+            
+        }
+        
+        typealias UIViewControllerType = UIViewController
     }
 }
