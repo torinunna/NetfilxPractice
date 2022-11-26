@@ -23,6 +23,9 @@ class HomeViewController: UICollectionViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.crop.circle"), style: .plain, target: nil, action: nil)
         
         contents = getContents()
+        
+        collectionView.register(ContentCollectionViewCell.self, forCellWithReuseIdentifier: "ContentCollectionViewCell")
+        collectionView.register(CollectionViewHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "CollectionViewHeader")
     }
     
     func getContents() -> [Content] {
@@ -32,4 +35,45 @@ class HomeViewController: UICollectionViewController {
         return list
     }
     
+}
+
+extension HomeViewController {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        switch section {
+        case 0:
+            return 1
+        default:
+            return contents[section].contentItem.count
+        }
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        switch contents[indexPath.section].sectionType {
+        case .basic, .large:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ContentCollectionViewCell", for: indexPath) as? ContentCollectionViewCell else { return UICollectionViewCell() }
+            cell.imageView.image = contents[indexPath.section].contentItem[indexPath.row].image
+            return cell
+        default:
+            return UICollectionViewCell()
+        }
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        if kind == UICollectionView.elementKindSectionHeader {
+            guard let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "CollectionViewHeader", for: indexPath) as? CollectionViewHeader else { fatalError("Cound not deque Header") }
+            headerView.sectionNameLabel.text = contents[indexPath.section].sectionName
+            return headerView
+        } else {
+            return UICollectionReusableView()
+        }
+    }
+    
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return contents.count
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let sectionName = contents[indexPath.section].sectionName
+        print("Test: \(sectionName)섹션의 \(indexPath.row + 1)번째 콘텐츠")
+    }
 }
