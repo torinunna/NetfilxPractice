@@ -45,6 +45,8 @@ class HomeViewController: UICollectionViewController {
             switch self.contents[sectionNumber].sectionType {
             case .basic:
                 return self.createBasicTypeSection()
+            case .large:
+                return self.createLargeTypeSecton()
             default:
                 return nil
             }
@@ -65,6 +67,21 @@ class HomeViewController: UICollectionViewController {
         return section
     }
  
+    private func createLargeTypeSecton() -> NSCollectionLayoutSection {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.3), heightDimension: .fractionalHeight(0.75))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        item.contentInsets = .init(top: 10, leading: 5, bottom: 0, trailing: 5)
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.9), heightDimension: .estimated(400))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 2)
+        let section = NSCollectionLayoutSection(group: group)
+        section.orthogonalScrollingBehavior = .continuous
+        
+        let sectionHeader = self.createSectionHeader()
+        section.boundarySupplementaryItems = [sectionHeader]
+        section.contentInsets = .init(top: 0, leading: 5, bottom: 0, trailing: 5)
+        return section
+    }
+    
     private func createSectionHeader() -> NSCollectionLayoutBoundarySupplementaryItem {
         let layoutSectionHeaderSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(30))
         let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: layoutSectionHeaderSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
@@ -74,7 +91,8 @@ class HomeViewController: UICollectionViewController {
 
 extension HomeViewController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if contents[section].sectionType == .basic {
+        if contents[section].sectionType == .basic
+            || contents[section].sectionType == .large {
             switch section {
             case 0:
                 return 1
