@@ -175,20 +175,20 @@ extension HomeViewController {
 
 struct HomeViewController_Previews: PreviewProvider {
     static var previews: some View {
-        Container().edgesIgnoringSafeArea(.all)
+        HomeViewControllerRepresentable().edgesIgnoringSafeArea(.all)
+    }
+}
+
+struct HomeViewControllerRepresentable: UIViewControllerRepresentable {
+    func makeUIViewController(context: Context) -> UIViewController {
+        let layout = UICollectionViewLayout()
+        let homeViewController = HomeViewController(collectionViewLayout: layout)
+        return UINavigationController(rootViewController: homeViewController)
     }
     
-    struct Container: UIViewControllerRepresentable {
-        func makeUIViewController(context: Context) -> UIViewController {
-            let layout = UICollectionViewLayout()
-            let homeViewController = HomeViewController(collectionViewLayout: layout)
-            return UINavigationController(rootViewController: homeViewController)
-        }
+    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
         
-        func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
-            
-        }
-        
-        typealias UIViewControllerType = UIViewController
     }
+    
+    typealias UIViewControllerType = UIViewController
 }

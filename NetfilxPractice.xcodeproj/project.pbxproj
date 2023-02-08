@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8607BB40299391E40071542F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8607BB3F299391E40071542F /* ContentView.swift */; };
 		867EC32829362A2B00973D92 /* ContentMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867EC32729362A2B00973D92 /* ContentMainCell.swift */; };
 		86BC2DD5293095A300306A9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BC2DD4293095A300306A9E /* AppDelegate.swift */; };
 		86BC2DD7293095A300306A9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BC2DD6293095A300306A9E /* SceneDelegate.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8607BB3F299391E40071542F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		867EC32729362A2B00973D92 /* ContentMainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentMainCell.swift; sourceTree = "<group>"; };
 		86BC2DD1293095A300306A9E /* NetfilxPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetfilxPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86BC2DD4293095A300306A9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				86BC2DD4293095A300306A9E /* AppDelegate.swift */,
 				86BC2DD6293095A300306A9E /* SceneDelegate.swift */,
 				86BC2DE82930965D00306A9E /* HomeViewController.swift */,
+				8607BB3F299391E40071542F /* ContentView.swift */,
 				867EC32729362A2B00973D92 /* ContentMainCell.swift */,
 				86D479FC2936309500747269 /* UIButton+.swift */,
 				86BC2DFB2931EF1700306A9E /* ContentRankCell.swift */,
@@ -170,6 +173,7 @@
 				86BC2DFC2931EF1700306A9E /* ContentRankCell.swift in Sources */,
 				86D479FD2936309500747269 /* UIButton+.swift in Sources */,
 				86BC2DD7293095A300306A9E /* SceneDelegate.swift in Sources */,
+				8607BB40299391E40071542F /* ContentView.swift in Sources */,
 				86BC2DE92930965D00306A9E /* HomeViewController.swift in Sources */,
 				86BC2DF42930A2A600306A9E /* Content.swift in Sources */,
 				86BC2DF82930ADF500306A9E /* ContentCollectionViewCell.swift in Sources */,
