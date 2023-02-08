@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8607BB40299391E40071542F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8607BB3F299391E40071542F /* ContentView.swift */; };
+		8607BB42299393F10071542F /* ContentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8607BB41299393F10071542F /* ContentDetailView.swift */; };
 		867EC32829362A2B00973D92 /* ContentMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867EC32729362A2B00973D92 /* ContentMainCell.swift */; };
 		86BC2DD5293095A300306A9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BC2DD4293095A300306A9E /* AppDelegate.swift */; };
 		86BC2DD7293095A300306A9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BC2DD6293095A300306A9E /* SceneDelegate.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		8607BB3F299391E40071542F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8607BB41299393F10071542F /* ContentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailView.swift; sourceTree = "<group>"; };
 		867EC32729362A2B00973D92 /* ContentMainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentMainCell.swift; sourceTree = "<group>"; };
 		86BC2DD1293095A300306A9E /* NetfilxPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetfilxPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86BC2DD4293095A300306A9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				86BC2DD6293095A300306A9E /* SceneDelegate.swift */,
 				86BC2DE82930965D00306A9E /* HomeViewController.swift */,
 				8607BB3F299391E40071542F /* ContentView.swift */,
+				8607BB41299393F10071542F /* ContentDetailView.swift */,
 				867EC32729362A2B00973D92 /* ContentMainCell.swift */,
 				86D479FC2936309500747269 /* UIButton+.swift */,
 				86BC2DFB2931EF1700306A9E /* ContentRankCell.swift */,
@@ -168,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				867EC32829362A2B00973D92 /* ContentMainCell.swift in Sources */,
+				8607BB42299393F10071542F /* ContentDetailView.swift in Sources */,
 				86BC2DD5293095A300306A9E /* AppDelegate.swift in Sources */,
 				86BC2DFA2930AFAE00306A9E /* CollectionViewHeader.swift in Sources */,
 				86BC2DFC2931EF1700306A9E /* ContentRankCell.swift in Sources */,
